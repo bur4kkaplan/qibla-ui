@@ -149,6 +149,12 @@
 
   </style>
 </head>
+<script>
+  // Sayfa yüklenince backend'i uyandır
+  fetch("https://qibla-api.onrender.com/api/ping")
+    .then(res => console.log("Backend ping atıldı:", res.status))
+    .catch(err => console.error("Backend uyanamadı:", err));
+</script>
 <body>
   <div class="card">
 
